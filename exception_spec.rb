@@ -1,4 +1,4 @@
-class ExeptionError < RuntimeError
+class ExceptionError < RuntimeError
   attr_accessor :cause
   def initialize(cause)
     super()
@@ -8,7 +8,7 @@ end
 
 RSpec.describe "Test exeption" do
   it "crashed" do
-    raise ExeptionError.new("RSpec error")
+    raise ExceptionError.new("RSpec error")
     expect("pass").to eq "pass"
   end
 
